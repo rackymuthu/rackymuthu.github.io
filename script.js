@@ -4,8 +4,12 @@
 
 // Initialize EmailJS
 (function() {
-  // Replace with your actual EmailJS public key when ready to use
-  emailjs.init('u7PjywkMu4rciztWC'); // User needs to replace this
+  // Initialize with config value when available
+  if (window.EMAILJS_CONFIG) {
+    emailjs.init(window.EMAILJS_CONFIG.PUBLIC_KEY);
+  } else {
+    console.error('EmailJS configuration not loaded');
+  }
 })();
 
 // DOM Elements
@@ -30,7 +34,7 @@ const animationObserver = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Initialize portfolio functionality
+// Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   initNavigation();
   initScrollEffects();
@@ -41,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initTypingEffect();
   initParallaxEffect();
   initCardAnimations();
+  
+  // Update dynamic content
+  updateDynamicContent();
   
   // Show page after initialization
   document.body.style.opacity = '1';
@@ -150,6 +157,14 @@ function initAnimations() {
 // Enhanced Contact Form with EmailJS
 function initContactForm() {
   if (!contactForm) return;
+  
+  // Prevent multiple event listeners by checking if already initialized
+  if (contactForm.dataset.initialized === 'true') {
+    return;
+  }
+  
+  // Mark as initialized
+  contactForm.dataset.initialized = 'true';
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -164,35 +179,71 @@ function initContactForm() {
       return;
     }
 
+    // Check if config is loaded
+    if (!window.EMAILJS_CONFIG) {
+      showNotification('EmailJS configuration not loaded. Please refresh the page.', 'error');
+      return;
+    }
+
     // Show loading state
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
 
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS with config values
       const response = await emailjs.send(
-        'portfolio_email_service', // Replace with your EmailJS service ID
-        'template_741jqj5', // Replace with your EmailJS template ID
+        window.EMAILJS_CONFIG.SERVICE_ID,
+        window.EMAILJS_CONFIG.TEMPLATE_ID,
         {
           from_name: formData.get('name'),
           from_email: formData.get('email'),
           subject: formData.get('subject'),
           message: formData.get('message'),
-          to_email: 'racky.rmuthu@gmail.com'
+          to_email: window.EMAILJS_CONFIG.TO_EMAIL
         }
       );
 
       if (response.status === 200) {
+        // Show success state on button first
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+        submitBtn.style.backgroundColor = '#10b981';
+        
+        // Show notification
         showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        
+        // Reset form
         contactForm.reset();
+        
+        // Reset button after a short delay to show success state
+        setTimeout(() => {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.style.backgroundColor = '';
+          submitBtn.disabled = false;
+        }, 2000);
+        
+        return; // Exit early to avoid finally block
       } else {
         throw new Error('Failed to send message');
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
-      showNotification('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
-    } finally {
-      // Reset button
+      
+      // More detailed error handling
+      let errorMessage = 'Sorry, there was an error sending your message. ';
+      
+      if (error.status === 404) {
+        errorMessage += 'EmailJS service not found. Please check the configuration.';
+      } else if (error.status === 400) {
+        errorMessage += 'Invalid template or missing required fields.';
+      } else if (error.status === 422) {
+        errorMessage += 'Email service temporarily unavailable.';
+      } else {
+        errorMessage += `Please try again or contact me directly at ${window.EMAILJS_CONFIG?.TO_EMAIL || 'racky.rmuthu@gmail.com'}`;
+      }
+      
+      showNotification(errorMessage, 'error');
+      
+      // Reset button immediately on error
       submitBtn.innerHTML = originalBtnText;
       submitBtn.disabled = false;
     }
@@ -556,24 +607,6 @@ function safeQuerySelector(selector) {
   return element;
 }
 
-// Enhanced console message for developers
-console.log(`
-🚀 Portfolio Loaded Successfully!
-👨‍💻 R. Rackymuthu - Manager at Deloitte
-📧 racky.rmuthu@gmail.com
-🔗 linkedin.com/in/rackymuthu
-🌐 github.com/rackymuthu
-
-Built with modern web technologies:
-✅ Responsive Design
-✅ Smooth Animations  
-✅ Interactive Elements
-✅ EmailJS Integration
-✅ SEO Optimized
-✅ Accessibility Features
-
-For any questions or collaboration opportunities, feel free to reach out!
-`);
 
 // Add CSS for additional animations
 const additionalStyles = `
@@ -669,24 +702,4 @@ function updateDynamicContent() {
         const currentYear = currentDate.getFullYear();
         currentYearSpan.textContent = currentYear;
     }
-}
-
-// Initialize all functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS
-    emailjs.init('0pfPBJb4h3qTNNqvb');
-    
-    // Initialize all components
-    initNavigation();
-    initScrollEffects();
-    initAnimations();
-    initContactForm();
-    
-    // Update dynamic content
-    updateDynamicContent();
-    
-    console.log('🚀 Professional Portfolio Loaded Successfully!');
-    console.log('💼 Technologies: HTML5, CSS3, JavaScript, EmailJS');
-    console.log('🎨 Features: Responsive Design, Smooth Animations, Contact Form');
-    console.log('📧 Contact: racky.rmuthu@gmail.com');
-}); 
+} 

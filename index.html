@@ -1,123 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Racky Muthu - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h1, h2, h3 {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .project {
-      margin-bottom: 1.5rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      padding: 1rem;
-      background-color: #222;
-      color: #fff;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="R Rackymuthu - Manager at Deloitte with 9.2 years of experience in Python, AWS, and full-stack development">
+  <meta name="keywords" content="Rackymuthu, Software Engineer, Python, Django, AWS, Deloitte, Portfolio, Manager">
+  <meta name="author" content="R Rackymuthu">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="R Rackymuthu - Manager at Deloitte | Software Engineering Portfolio">
+  <meta property="og:description" content="Manager at Deloitte with 9.2 years of experience in software engineering, specializing in Python, AWS, and modern web technologies">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rackymuthu.github.io">
+  
+  <title>R Rackymuthu - Manager at Deloitte | Portfolio</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- EmailJS for contact form -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Mr. R Rackymuthu</h1>
-    <p>Manager in Deloitte | 9.2 Years of Experience in Software Engineering</p>
-    <p>📍 Coimbatore, Tamil Nadu, India | 📞 +91 97888-30879 | ✉️ <a href="mailto:racky.rmuthu@gmail.com">racky.rmuthu@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-      <a href="https://yourusername.github.io" target="_blank">Portfolio</a>
-    </p>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2>Education</h2>
-      <p><strong>GAC, Bharathiar University, Coimbatore</strong><br />
-        Master of Science in Information Technology (2014-2016)<br />
-        CGPA: 7.5</p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Backend:</strong> Python, Django, Flask, FastAPI</li>
-        <li><strong>Frontend:</strong> JavaScript, jQuery</li>
-        <li><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</li>
-        <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
-        <li><strong>CI/CD:</strong> Git, Jenkins, Bitbucket, Terraform, ArgoCD, Kubernetes</li>
-        <li><strong>Monitoring:</strong> Dynatrace, OpenTelemetry, Prometheus, Grafana</li>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-text">RR</span>
+      </div>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#education" role="menuitem">Education</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
       </ul>
+      <div class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">R. Rackymuthu</span>
+          </h1>
+          <h2 class="hero-subtitle">Manager at Deloitte | Software Engineering Leader</h2>
+          <p class="hero-description">
+            With <strong class="experience-years">0 years</strong> of experience in software engineering, I specialize in building scalable applications, 
+            leading technical teams, and architecting cloud-native solutions using Python, AWS, and modern technologies.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number experience-stat">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">Major Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" download="R_Rackymuthu_Resume.pdf">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <img src="assets/images/Rackymuthu.jpg" alt="R. Rackymuthu - Professional Photo" class="profile-photo">
+            </div>
+            <div class="profile-info">
+              <h3>R. Rackymuthu</h3>
+              <p>Manager at Deloitte</p>
+              <div class="profile-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Coimbatore, Tamil Nadu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>Deloitte India</strong> — Senior Consultant (Sep 2022 - Present)</p>
-      <p><strong>TCS</strong> — Senior Software Engineer (May 2021 - Sep 2022)</p>
-      <p><strong>Digixr Technologies</strong> — Software Engineer (Feb 2020 - May 2021)</p>
-      <p><strong>Next Techno Solutions</strong> — Solution Developer (May 2016 - Feb 2020)</p>
+  <!-- Experience Summary Section -->
+  <section class="summary">
+    <div class="container">
+      <h2 class="section-title">Experience Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Backend Development</h3>
+          <p>Proficient in Python with hands-on expertise in Django, Flask, and FastAPI to build scalable applications.</p>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>Skilled in JavaScript, jQuery, and React for dynamic, responsive UI design.</p>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Database Management</h3>
+          <p>Experienced with SQL and NoSQL databases including MySQL, PostgreSQL, and MongoDB.</p>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Cloud Computing</h3>
+          <p>Expert in AWS, Azure, and GCP with extensive experience in cloud architecture and deployment.</p>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Team Leadership</h3>
+          <p>Capable of leading teams and maintaining client relationships for effective solution delivery.</p>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>DevOps & CI/CD</h3>
+          <p>Experience with Git, Jenkins, Docker, Kubernetes, Terraform, and modern DevOps practices.</p>
+        </div>
+      </div>
+    </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Feature Builder - Experian</h3>
-        <p>Designed a real-time microservices-based platform for feature tracking and reuse using FastAPI, AWS, PostgreSQL, and Kubernetes.</p>
+  <!-- Work Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Manager / Senior Consultant</h3>
+              <span class="company">Deloitte India</span>
+              <span class="duration">Sep 2022 - Present</span>
+              <span class="location">Coimbatore, Tamil Nadu</span>
+            </div>
+            <div class="timeline-description">
+              <p>Leading technical teams and architecting enterprise-scale solutions for global clients.</p>
+              <ul>
+                <li>Managing complex projects including Feature Builder and Collective IQ platforms</li>
+                <li>Architecting microservices and cloud-native solutions using AWS and modern technologies</li>
+                <li>Leading cross-functional teams and ensuring timely delivery of client solutions</li>
+                <li>Mentoring team members and conducting technical reviews</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Senior Software Engineer</h3>
+              <span class="company">Tata Consultancy Services (TCS)</span>
+              <span class="duration">May 2021 - Sep 2022</span>
+              <span class="location">Bangalore, Karnataka</span>
+            </div>
+            <div class="timeline-description">
+              <p>Developed scalable backend systems and APIs for enterprise clients including Sky UK.</p>
+              <ul>
+                <li>Built Sauran API management platform for real-time network data processing</li>
+                <li>Worked directly with UK clients using agile methodologies</li>
+                <li>Developed RESTful APIs and integrated with BigQuery for analytics</li>
+                <li>Managed complete development lifecycle with client feedback loops</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software Engineer</h3>
+              <span class="company">Digixr Technologies</span>
+              <span class="duration">Feb 2020 - May 2021</span>
+              <span class="location">Coimbatore, Tamil Nadu</span>
+            </div>
+            <div class="timeline-description">
+              <p>Full-stack development focusing on ERP systems and microservice architecture.</p>
+              <ul>
+                <li>Developed SMOOR ERP system for chocolate manufacturing industry</li>
+                <li>Led team development and trained junior developers</li>
+                <li>Built hostel management system using microservices architecture</li>
+                <li>Implemented AWS cloud solutions and message queueing systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Solution Developer</h3>
+              <span class="company">Next Techno Solutions (P) Ltd</span>
+              <span class="duration">May 2016 - Feb 2020</span>
+              <span class="location">Coimbatore, Tamil Nadu</span>
+            </div>
+            <div class="timeline-description">
+              <p>Started career developing innovative solutions including chatbots and cloud management systems.</p>
+              <ul>
+                <li>Developed EXOS cloud orchestration tool for PNG Government</li>
+                <li>Built IDAAS identity management solution with Keycloak</li>
+                <li>Created NIAA chatbot using Rasa and supervised learning</li>
+                <li>Gained expertise in cloud technologies and full-stack development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>Collective IQ - Experian</h3>
-        <p>Led module implementation and infrastructure provisioning for an internal project analytics platform.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-meta">
+              <h3>Feature Builder Platform</h3>
+              <span class="project-client">Experian</span>
+              <span class="project-duration">Jul 2024 - Present</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>Built a centralized platform for real-time feature creation and tracking for data scientists and engineers.</p>
+            <ul>
+              <li>Developed microservices and REST APIs</li>
+              <li>Ensured seamless system interaction and scalable architecture</li>
+              <li>Focused on backend documentation and knowledge sharing</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Kafka</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="project-meta">
+              <h3>Collective IQ Platform</h3>
+              <span class="project-client">Experian</span>
+              <span class="project-duration">Sep 2022 - Present</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>Project management & analytics platform enabling internal users to manage specifications and logic in multiple languages.</p>
+            <ul>
+              <li>Developed core modules and client integrations</li>
+              <li>Provisioned AWS infrastructure via Terraform</li>
+              <li>Built analytics and reporting capabilities</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">Dynatrace</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-satellite-dish"></i>
+            </div>
+            <div class="project-meta">
+              <h3>Sauran API Management</h3>
+              <span class="project-client">Sky UK</span>
+              <span class="project-duration">May 2021 - Sep 2022</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>API platform handling real-time network data and Swagger-based API monitoring.</p>
+            <ul>
+              <li>Worked directly with UK clients under agile model</li>
+              <li>Managed development lifecycle and feedback loops</li>
+              <li>Integrated with BigQuery for real-time analytics</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">BigQuery</span>
+            <span class="tech-tag">GCP</span>
+            <span class="tech-tag">Swagger</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="project-meta">
+              <h3>SMOOR ERP System</h3>
+              <span class="project-client">SMOOR</span>
+              <span class="project-duration">Jul 2020 - May 2021</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>End-to-end ERP system for manufacturing, inventory, and customer management in chocolate industry.</p>
+            <ul>
+              <li>Led a team and trained freshers</li>
+              <li>Interacted with stakeholders for requirements</li>
+              <li>Implemented complete manufacturing workflow</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">ERPNext</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Lambda</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="project-meta">
+              <h3>Hostel Management System</h3>
+              <span class="project-client">Internal Project</span>
+              <span class="project-duration">Feb 2020 - Jun 2020</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>A microservice-based hostel administration system with message queueing.</p>
+            <ul>
+              <li>Single-handedly developed entire application</li>
+              <li>Implemented microservices architecture</li>
+              <li>Used message queuing for async processing</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">RabbitMQ</span>
+            <span class="tech-tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="project-meta">
+              <h3>NIAA Chatbot</h3>
+              <span class="project-client">HR Assistant</span>
+              <span class="project-duration">Mar 2019 - Feb 2020</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>Supervised-learning based chatbot for employee and HR FAQs.</p>
+            <ul>
+              <li>Built datasets and trained the Rasa-powered bot</li>
+              <li>Integrated with Rocket.Chat platform</li>
+              <li>Implemented natural language processing</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Rocket.Chat</span>
+            <span class="tech-tag">Rasa</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="project-meta">
+              <h3>IDAAS - Identity Service</h3>
+              <span class="project-client">Internal System</span>
+              <span class="project-duration">Dec 2017 - Mar 2019</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>Single sign-on solution for internal apps with secure access management.</p>
+            <ul>
+              <li>Led full-stack development and deployment</li>
+              <li>Implemented secure authentication protocols</li>
+              <li>Integrated with OpenLDAP for user management</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Keycloak</span>
+            <span class="tech-tag">OpenLDAP</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <div class="project-meta">
+              <h3>EXOS Cloud Management</h3>
+              <span class="project-client">PNG Government</span>
+              <span class="project-duration">Jul 2016 - Dec 2017</span>
+            </div>
+          </div>
+          <div class="project-description">
+            <p>Full-suite cloud orchestration tool for compute, network, and monitoring management.</p>
+            <ul>
+              <li>Developed and integrated backend systems with UI</li>
+              <li>Optimized for performance and reliability</li>
+              <li>Implemented comprehensive monitoring solutions</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">jQuery</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">OpenNebula</span>
+            <span class="tech-tag">Redis</span>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>Sauran - Sky UK</h3>
-        <p>Developed real-time API management tools for traffic data using Flask and BigQuery.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-code"></i>
+            <h3>Backend Development</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Microservices</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend Development</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">jQuery</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-database"></i>
+            <h3>Database & Storage</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">BigQuery</span>
+            <span class="skill-tag">DynamoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud & Infrastructure</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">CloudFormation</span>
+            <span class="skill-tag">Serverless</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-cogs"></i>
+            <h3>DevOps & Tools</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Monitoring & Analytics</h3>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Prometheus</span>
+            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">Dynatrace</span>
+            <span class="skill-tag">Kibana</span>
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">ELK Stack</span>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>SMOOR Chocolate ERP</h3>
-        <p>ERP for chocolate manufacturing processes with real-time data flow and AWS services.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-card">
+        <div class="education-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="education-content">
+          <h3>Master of Science in Information Technology</h3>
+          <p class="institution">GAC, Bharathiar University, Coimbatore, Tamil Nadu</p>
+          <div class="education-details">
+            <span class="duration">2014 - 2016</span>
+            <span class="grade">CGPA: 7.5</span>
+          </div>
+          <p class="education-description">
+            Focused on advanced software engineering concepts, database management, 
+            and emerging technologies in information systems. Built strong foundation 
+            in programming, algorithms, and system design.
+          </p>
+        </div>
       </div>
-      <!-- You can add more project summaries here -->
+    </div>
     </section>
 
-    <section>
-      <h2>Download Resume</h2>
-      <p><a href="./resume.pdf" target="_blank">Click here to download PDF</a></p>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts.</p>
+          
+          <div class="contact-methods">
+            <a href="mailto:racky.rmuthu@gmail.com" class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="method-label">Email</span>
+                <span class="method-value">racky.rmuthu@gmail.com</span>
+              </div>
+            </a>
+            
+            <a href="tel:+919788830879" class="contact-method">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="method-label">Primary Phone</span>
+                <span class="method-value">+91 97888-30879</span>
+              </div>
+            </a>
+            
+            <a href="tel:+919688820313" class="contact-method">
+              <i class="fas fa-mobile-alt"></i>
+              <div>
+                <span class="method-label">Secondary Phone</span>
+                <span class="method-value">+91 96888-20313</span>
+              </div>
+            </a>
+            
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="method-label">Location</span>
+                <span class="method-value">Coimbatore, Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     </section>
-  </div>
 
-  <footer>
-    <p>© 2025 Mr. R Rackymuthu | Powered by GitHub Pages</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>R. Rackymuthu</h3>
+          <p>Manager at Deloitte | Software Engineering Leader</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="social-links">
+            <a href="https://github.com/rackymuthu" target="_blank" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rackymuthu" target="_blank" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:racky.rmuthu@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+919788830879" aria-label="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2025</span> R. Rackymuthu. All rights reserved. | Built with ❤️ and modern web technologies</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

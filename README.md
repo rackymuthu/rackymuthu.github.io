@@ -1,2 +1,0 @@
-# rackymuthu.github.io
-Welcome

@@ -2,13 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Racky R – Resume</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racky Muthu - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h1, h2, h3 {
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 1rem;
+      background-color: #222;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I’m Racky R</h1>
-  <p>Software Engineer | 8+ years experience</p>
-  <a href="resume.pdf" download>Download My Resume</a>
+  <header>
+    <h1>Mr. R Rackymuthu</h1>
+    <p>Manager in Deloitte | 9.2 Years of Experience in Software Engineering</p>
+    <p>📍 Coimbatore, Tamil Nadu, India | 📞 +91 97888-30879 | ✉️ <a href="mailto:racky.rmuthu@gmail.com">racky.rmuthu@gmail.com</a></p>
+    <p>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://yourusername.github.io" target="_blank">Portfolio</a>
+    </p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Education</h2>
+      <p><strong>GAC, Bharathiar University, Coimbatore</strong><br />
+        Master of Science in Information Technology (2014-2016)<br />
+        CGPA: 7.5</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Backend:</strong> Python, Django, Flask, FastAPI</li>
+        <li><strong>Frontend:</strong> JavaScript, jQuery</li>
+        <li><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</li>
+        <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
+        <li><strong>CI/CD:</strong> Git, Jenkins, Bitbucket, Terraform, ArgoCD, Kubernetes</li>
+        <li><strong>Monitoring:</strong> Dynatrace, OpenTelemetry, Prometheus, Grafana</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Work Experience</h2>
+      <p><strong>Deloitte India</strong> — Senior Consultant (Sep 2022 - Present)</p>
+      <p><strong>TCS</strong> — Senior Software Engineer (May 2021 - Sep 2022)</p>
+      <p><strong>Digixr Technologies</strong> — Software Engineer (Feb 2020 - May 2021)</p>
+      <p><strong>Next Techno Solutions</strong> — Solution Developer (May 2016 - Feb 2020)</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Feature Builder - Experian</h3>
+        <p>Designed a real-time microservices-based platform for feature tracking and reuse using FastAPI, AWS, PostgreSQL, and Kubernetes.</p>
+      </div>
+      <div class="project">
+        <h3>Collective IQ - Experian</h3>
+        <p>Led module implementation and infrastructure provisioning for an internal project analytics platform.</p>
+      </div>
+      <div class="project">
+        <h3>Sauran - Sky UK</h3>
+        <p>Developed real-time API management tools for traffic data using Flask and BigQuery.</p>
+      </div>
+      <div class="project">
+        <h3>SMOOR Chocolate ERP</h3>
+        <p>ERP for chocolate manufacturing processes with real-time data flow and AWS services.</p>
+      </div>
+      <!-- You can add more project summaries here -->
+    </section>
+
+    <section>
+      <h2>Download Resume</h2>
+      <p><a href="./resume.pdf" target="_blank">Click here to download PDF</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Mr. R Rackymuthu | Powered by GitHub Pages</p>
+  </footer>
 </body>
 </html>
-

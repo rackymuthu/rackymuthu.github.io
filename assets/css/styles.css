@@ -593,7 +593,6 @@ a:hover {
 }
 
 .summary-item:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
 }
 
@@ -684,7 +683,6 @@ a:hover {
 }
 
 .timeline-content:hover {
-  transform: translateX(10px);
   box-shadow: var(--shadow-xl);
 }
 
@@ -770,7 +768,6 @@ a:hover {
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
   box-shadow: var(--shadow-2xl);
   border-color: var(--primary-color);
 }
@@ -864,7 +861,6 @@ a:hover {
   background: var(--primary-color);
   color: var(--text-white);
   border-color: var(--primary-color);
-  transform: translateY(-1px);
 }
 
 /* Enhanced Skills Section */
@@ -889,7 +885,6 @@ a:hover {
 }
 
 .skill-category:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
 }
 
@@ -939,7 +934,6 @@ a:hover {
   background: var(--primary-color);
   color: var(--text-white);
   border-color: var(--primary-color);
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
@@ -963,7 +957,6 @@ a:hover {
 }
 
 .education-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-2xl);
 }
 
@@ -1057,7 +1050,6 @@ a:hover {
 }
 
 .contact-method:hover {
-  transform: translateX(5px);
   box-shadow: var(--shadow-md);
   text-decoration: none;
   color: inherit;
@@ -1403,22 +1395,6 @@ a:hover {
     width: 100%;
     justify-content: center;
   }
-}
-
-/* Enhanced Loading Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Enhanced Focus States for Accessibility */

@@ -20,25 +20,10 @@ const navMenuItems = document.querySelectorAll('.nav-menu a');
 const backToTopBtn = document.querySelector('.back-to-top');
 const contactForm = document.getElementById('contactForm');
 
-// Enhanced Animation Observer
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const animationObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-up');
-    }
-  });
-}, observerOptions);
-
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   initNavigation();
   initScrollEffects();
-  initAnimations();
   initContactForm();
   initBackToTop();
   initSmoothScrolling();
@@ -124,33 +109,6 @@ function initScrollEffects() {
     }
     
     lastScrollTop = scrollTop;
-  });
-}
-
-// Enhanced Animation System
-function initAnimations() {
-  // Observe elements for animations
-  const animateElements = document.querySelectorAll(`
-    .summary-item, .timeline-item, .project-card, 
-    .skill-category, .education-card, .contact-method
-  `);
-  
-  animateElements.forEach(el => {
-    animationObserver.observe(el);
-  });
-
-  // Stagger animations for grouped elements
-  const staggerGroups = [
-    { selector: '.summary-item', delay: 100 },
-    { selector: '.project-card', delay: 150 },
-    { selector: '.skill-category', delay: 200 }
-  ];
-
-  staggerGroups.forEach(group => {
-    const elements = document.querySelectorAll(group.selector);
-    elements.forEach((el, index) => {
-      el.style.animationDelay = `${index * group.delay}ms`;
-    });
   });
 }
 

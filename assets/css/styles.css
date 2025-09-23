@@ -1,31 +1,37 @@
 /* Modern CSS Variables for Enhanced UI/UX */
 :root {
-  /* Enhanced Color Palette */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary-color: #64748b;
-  --secondary-dark: #475569;
-  --accent-color: #f59e0b;
-  --accent-dark: #d97706;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --error-color: #ef4444;
+  /* Enhanced Color Palette - Modern 2024 Colors */
+  --primary-color: #3b82f6;
+  --primary-dark: #1e40af;
+  --primary-light: #60a5fa;
+  --primary-ultra-light: #dbeafe;
+  --secondary-color: #6b7280;
+  --secondary-dark: #374151;
+  --secondary-light: #9ca3af;
+  --accent-color: #8b5cf6;
+  --accent-dark: #7c3aed;
+  --accent-light: #a78bfa;
+  --success-color: #059669;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
   
-  /* Enhanced Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  /* Enhanced Gradients - Modern 2024 */
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  --gradient-dark: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+  --gradient-card: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
   
-  /* Enhanced Background Colors */
+  /* Enhanced Background Colors - Modern Glass Effect */
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --bg-dark: #0f172a;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --bg-dark: #111827;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+  --bg-glass-hover: rgba(255, 255, 255, 0.2);
   
   /* Enhanced Text Colors */
   --text-primary: #1e293b;
@@ -58,14 +64,16 @@
   --spacing-3xl: 4rem;
   --spacing-4xl: 6rem;
   
-  /* Enhanced Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Enhanced Shadows - Modern Depth */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-glow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-  --shadow-colored: 0 10px 25px -5px rgba(102, 126, 234, 0.3);
+  --shadow-colored: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --shadow-float: 0 12px 24px -6px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);
   
   /* Enhanced Border Radius */
   --border-radius-sm: 0.375rem;
@@ -114,7 +122,10 @@ body {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-normal);
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -218,6 +229,12 @@ a:hover {
   height: 4px;
   background: var(--gradient-primary);
   border-radius: var(--border-radius-full);
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; transform: translateX(-50%) scaleX(1); }
+  100% { opacity: 1; transform: translateX(-50%) scaleX(1.1); }
 }
 
 /* Enhanced Button Styles */
@@ -258,11 +275,12 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+  background: var(--gradient-primary);
   color: var(--text-white);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: var(--shadow-colored);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary::before {
@@ -270,8 +288,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
   color: var(--text-white);
   text-decoration: none;
 }
@@ -305,9 +323,10 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-glass);
   z-index: var(--z-fixed);
   transition: all var(--transition-normal);
 }
@@ -366,7 +385,8 @@ a:hover {
 .nav-menu a:hover {
   color: var(--primary-color);
   text-decoration: none;
-  background: var(--bg-secondary);
+  background: var(--primary-ultra-light);
+  transform: translateY(-1px);
 }
 
 .nav-menu a:hover::after {
@@ -574,9 +594,11 @@ a:hover {
 
 .summary-item {
   background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-float);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -593,7 +615,9 @@ a:hover {
 }
 
 .summary-item:hover {
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-2xl);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
 .summary-icon {
@@ -748,13 +772,14 @@ a:hover {
 
 .project-card {
   background: var(--bg-card);
+  backdrop-filter: blur(20px);
   border-radius: var(--border-radius-xl);
   padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-float);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-card::before {
@@ -768,8 +793,9 @@ a:hover {
 }
 
 .project-card:hover {
+  transform: translateY(-10px) scale(1.02);
   box-shadow: var(--shadow-2xl);
-  border-color: var(--primary-color);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .project-header {
@@ -928,13 +954,16 @@ a:hover {
   border: 1px solid var(--border-color);
   transition: all var(--transition-normal);
   cursor: default;
+  position: relative;
+  overflow: hidden;
 }
 
 .skill-tag:hover {
-  background: var(--primary-color);
+  background: var(--gradient-primary);
   color: var(--text-white);
   border-color: var(--primary-color);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-colored);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .skill-tag.certified {
@@ -1087,6 +1116,12 @@ a:hover {
   border-top: 1px solid var(--border-light);
 }
 
+.cert-links {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
 .status-badge {
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--border-radius-full);
@@ -1120,6 +1155,20 @@ a:hover {
 
 .cert-link i {
   font-size: 0.75rem;
+}
+
+.cert-link.verify {
+  background: var(--success-color);
+  color: var(--text-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+}
+
+.cert-link.verify:hover {
+  background: var(--success-color);
+  color: var(--text-white);
+  transform: translateX(2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
 }
 
 /* Enhanced Education Section */
@@ -1711,6 +1760,10 @@ a:hover {
     flex-direction: column;
     gap: var(--spacing-md);
     align-items: center;
+  }
+  
+  .cert-links {
+    justify-content: center;
   }
   
   .footer-content {

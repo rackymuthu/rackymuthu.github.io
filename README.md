@@ -83,9 +83,17 @@ rackymuthu.github.io/
 │   │   ├── script.js          # Main JavaScript functionality
 │   │   └── lib/
 │   │       └── emailjs.min.js # EmailJS library
-│   ├── images/
-│   │   └── Rackymuthu.jpg     # Profile photo
-│   └── resume.pdf             # Resume document
+│   └── images/
+│       └── Rackymuthu.jpg     # Profile photo
+├── documents/                 # Documents and certificates folder
+│   ├── resume/
+│   │   ├── resume.pdf         # Current resume document
+│   │   └── README.md          # Resume management documentation
+│   └── certificates/         # Professional certificates
+│       ├── technical/         # Cloud, programming, and tech certifications
+│       ├── professional/      # Management, consulting, and business certifications
+│       ├── education/         # Academic certificates and transcripts
+│       └── README.md          # Certificates organization guide
 └── .git/                      # Git repository files
 ```
 
@@ -96,6 +104,8 @@ rackymuthu.github.io/
 - **`assets/js/script.js`**: JavaScript for interactions, animations, and form handling
 - **`assets/js/config.js`**: EmailJS configuration for contact form
 - **`assets/js/lib/emailjs.min.js`**: EmailJS library for email functionality
+- **`documents/resume/`**: Resume files and management documentation
+- **`documents/certificates/`**: Organized professional certificates by category
 
 ## 🚀 Setup Instructions
 
@@ -151,7 +161,8 @@ const EMAILJS_CONFIG = {
 2. **Styling**: Modify `assets/css/styles.css`
 3. **Functionality**: Enhance `assets/js/script.js`
 4. **Images**: Replace `assets/images/Rackymuthu.jpg`
-5. **Resume**: Update `assets/resume.pdf`
+5. **Resume**: Update `documents/resume/resume.pdf`
+6. **Certificates**: Add certificates to appropriate `documents/certificates/` subfolders
 
 ### Career Start Date
 

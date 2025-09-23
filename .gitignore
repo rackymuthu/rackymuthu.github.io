@@ -1,0 +1,44 @@
+# Portfolio Website - Git Ignore File
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional: Backup files (uncomment if you want to ignore backup files)
+# documents/resume/resume_*.pdf
+# documents/certificates/backup/
+
+# Optional: Personal certificates (uncomment if you want to keep certificates private)
+# documents/certificates/technical/*.pdf
+# documents/certificates/professional/*.pdf
+# documents/certificates/education/*.pdf
+
+# Node modules (if you add build tools later)
+node_modules/
+npm-debug.log*
+
+# Build outputs (if you add build tools later)
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.production
